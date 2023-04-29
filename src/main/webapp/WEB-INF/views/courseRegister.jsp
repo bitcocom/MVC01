@@ -30,6 +30,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="<c:url value='/resources/css/style.css'/>">
+    <script type="text/javascript">
+        function gogo(){
+            var mdays1=$("#mdays1").val();
+            var mdays2=$("#mdays2").val();
+            var mdays=mdays1+"~"+mdays2;
+            $("#mday").val(mdays);
+            var f = new FormData(document.getElementById('form1'));
+            $.ajax({
+                url: "<c:url value='/'/>",
+                data: f,
+                type: "POST",
+                processData: false,
+                contentType: false,
+                success: function(data){
+                    console.log(data);
+                    //document.getElementById('result').innerHTML ="데이터베이스입력완료";
+                    alert("코스등록입력완료");
+                    location.href="<c:url value='/'/>";
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -50,9 +72,7 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="card-title">
-                        <sec:authorize access="isAuthenticated()">
                             <h4 class="card-title">교육과정등록</h4>
-                        </sec:authorize>
                     </h4>
                         <form id="form1" name="form1">
                             <input type="hidden" name="mday" value="" id="mday">

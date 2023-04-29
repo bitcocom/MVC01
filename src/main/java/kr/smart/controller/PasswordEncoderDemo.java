@@ -1,4 +1,4 @@
-package kr.board.controller;
+package kr.smart.controller;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

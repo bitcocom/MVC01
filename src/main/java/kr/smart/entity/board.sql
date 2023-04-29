@@ -308,3 +308,6 @@ insert into member(username, password, name, email)
 values('bitcocom','$2a$10$bTKBkumGtbNl6nT.gM2KVey4CgmAuO1bAm0/VCWoDV4iFtsGG/Idm','박매일','bit@empas.com');
 
 delete from member where username='bitcocom';
+
+select * from mcourse;
+delete from mcourse where mnum=5 ;

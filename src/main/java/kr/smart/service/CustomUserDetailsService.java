@@ -1,8 +1,8 @@
-package kr.board.service;
+package kr.smart.service;
 
-import kr.board.entity.CustomUser;
-import kr.board.entity.Member;
-import kr.board.mapper.MemberMapper;
+import kr.smart.entity.CustomUser;
+import kr.smart.entity.Member;
+import kr.smart.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Service("userDetailsService")
 public class CustomUserDetailsService  implements UserDetailsService {
     @Autowired
     private MemberMapper memberMapper;

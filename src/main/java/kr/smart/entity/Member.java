@@ -1,4 +1,4 @@
-package kr.board.entity;
+package kr.smart.entity;
 
 import lombok.Data;
 

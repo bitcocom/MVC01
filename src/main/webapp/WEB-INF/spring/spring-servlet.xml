@@ -10,7 +10,7 @@
     <mvc:annotation-driven/>
 
     <!-- 컨텍스트 설정 -->
-    <context:component-scan base-package="kr.board.controller" />
+    <context:component-scan base-package="kr.smart.controller" />
 
     <mvc:resources mapping="/resources/**" location="/resources/" />
 
